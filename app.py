@@ -11,16 +11,16 @@ st.write("다운로드하고 싶은 파일을 선택하세요.")
 
 dir_path = Path(".", "/opt/openvidu/recordings")
 # dir_path = Path(".", "D:/test")
-files = os.listdir(dir_path)
+files = os.listdir(dir_path)[0]
 st.write(len(files))
 st.write((files))
+st.write(files[0])
+st.write(files[11])
 
 try:
     if files:
         st.write("파일이 존재합니다.")
         for file in files:
-            st.write(file)
-            st.write(file[0])
             st.download_button(
                 label=file,
                 data=open(dir_path.joinpath(file).joinpath(file + ".mp4"), "rb"),
