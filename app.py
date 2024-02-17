@@ -10,6 +10,7 @@ st.write("다운로드하고 싶은 파일을 선택하세요.")
 # files = results.json()["files"]
 
 dir_path = Path(".", "/opt/openvidu/recordings")
+# dir_path = Path(".", "D:/test")
 files = os.listdir(dir_path)
 
 try:
