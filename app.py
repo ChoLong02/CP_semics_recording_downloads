@@ -14,12 +14,13 @@ dir_path = Path(".", "/opt/openvidu/recordings")
 files = os.listdir(dir_path)
 st.write(len(files))
 st.write((files))
-st.write("ㅋㅋㅋㅋㅋㅋ")
 
 try:
     if files:
         st.write("파일이 존재합니다.")
         for file in files:
+            st.write(file)
+            st.write(file[0])
             st.download_button(
                 label=file,
                 data=open(dir_path.joinpath(file).joinpath(file + ".mp4"), "rb"),
